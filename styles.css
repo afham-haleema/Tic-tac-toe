@@ -1,0 +1,90 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(24, 19, 19);
+    color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+h1{
+    font-family: "Orbitron", sans-serif;
+    font-weight: 900;
+    color: rgb(67, 248, 248);
+    text-shadow: 2px 2px 3px rgb(111, 245, 245);
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 4px;
+}
+.container{
+    width: 600px;
+    height: 600px;
+    background-color: rgb(24, 19, 19);
+    margin: auto;
+    position: relative;
+    bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.box{
+    width: 33.33%;
+    height: 200px;
+    background-color: rgb(24, 19, 19);
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem;
+    font-family: sans-serif;
+    cursor: pointer;
+   
+}
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-last-child(-n+3){
+    border-bottom: none;
+}
+
+.player1{
+    font-size: 2rem;
+    font-family: "Orbitron", sans-serif;
+    position: relative;
+    bottom: 23rem;
+    left: 6rem;
+}
+.player1 #score{
+    position: relative;
+    left: 4rem;
+    top: 1rem;
+}
+.comp{
+    font-size: 2rem;
+    font-family: "Orbitron", sans-serif;
+    position: relative;
+    bottom: 27.5rem;
+    left: 73rem;
+    color: white;
+}
+.comp #score{
+    position: relative;
+    left: 4rem;
+    top: 1rem;
+}
+
+.zoom{
+    animation: zoom 0.3s forwards;
+    color: gold;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
