@@ -94,8 +94,8 @@ function findBestMove(player) {
 }
 
 function reset() {
-    player_score = 0;
-    comp_score = 0;
+    // player_score = 0;
+    // comp_score = 0;
     currentPlayer = "X";
     boxes.forEach(box => {
         box.innerText = "";

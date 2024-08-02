@@ -1,12 +1,13 @@
-body{
+body {
     padding: 0;
     margin: 0;
     background-color: rgb(24, 19, 19);
     color: white;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
 }
-h1{
+
+h1 {
     font-family: "Orbitron", sans-serif;
     font-weight: 900;
     color: rgb(67, 248, 248);
@@ -15,7 +16,8 @@ h1{
     font-size: 4rem;
     margin-top: 4px;
 }
-.container{
+
+.container {
     width: 600px;
     height: 600px;
     background-color: rgb(24, 19, 19);
@@ -27,7 +29,7 @@ h1{
     cursor: pointer;
 }
 
-.box{
+.box {
     width: 33.33%;
     height: 200px;
     background-color: rgb(24, 19, 19);
@@ -40,51 +42,119 @@ h1{
     font-size: 10rem;
     font-family: sans-serif;
     cursor: pointer;
-   
 }
-.box:nth-child(3n){
+.box {
+    /* Other styles */
+    font-size: 8vw; /* Base font size for larger screens */
+    transition: font-size 0.3s; /* Smooth transition for font size changes */
+}
+
+.box:nth-child(3n) {
     border-right: none;
 }
-.box:nth-last-child(-n+3){
+
+.box:nth-last-child(-n+3) {
     border-bottom: none;
 }
 
-.player1{
+.player1, .comp {
     font-size: 2rem;
     font-family: "Orbitron", sans-serif;
     position: relative;
-    bottom: 23rem;
-    left: 6rem;
-}
-.player1 #score{
-    position: relative;
-    left: 4rem;
-    top: 1rem;
-}
-.comp{
-    font-size: 2rem;
-    font-family: "Orbitron", sans-serif;
-    position: relative;
-    bottom: 27.5rem;
-    left: 73rem;
     color: white;
 }
-.comp #score{
+
+.player1 #score, .comp #score {
     position: relative;
     left: 4rem;
     top: 1rem;
 }
 
-.zoom{
+.player1 {
+    bottom: 23rem;
+    left: 6rem;
+}
+
+.comp {
+    bottom: 27.5rem;
+    left: 73rem;
+}
+
+.zoom {
     animation: zoom 0.3s forwards;
     color: gold;
 }
+
 @keyframes zoom {
-    0%{
+    0% {
         transform: scale(1);
     }
-    100%{
+    100% {
         transform: scale(1.2);
     }
 }
 
+@media (min-width: 200px) and (max-width: 1100px) {
+    .container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .player1 {
+        font-size: 1.5rem;
+        top: 18rem;
+        left: 30%;
+    }
+
+    .comp {
+        font-size: 1.5rem;
+        top: 14rem;
+        left: 74%;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 800px) {
+    .player1 {
+        font-size: 1.5rem;
+        top: 18rem;
+        left: 3rem;
+    }
+
+    .comp {
+        font-size: 1.5rem;
+        top: 14.3rem;
+        left: 13rem;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 750px) {
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .player1 {
+        font-size: 1.5rem;
+        top: 18rem;
+        left: 10rem;
+    }
+
+    .comp {
+        font-size: 1.5rem;
+        top: 14.3rem;
+        left: 25rem;
+    }
+}
+@media (max-width: 600px) {
+    .box {
+        font-size:20vw; /* Increase font size for smaller screens */
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+    .box {
+        font-size: 16vw; /* Adjust font size for medium screens */
+    }
+}
